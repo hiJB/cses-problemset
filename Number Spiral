@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+int t; 
+cin >> t;
+for(int w = 0; w < t;w++){
+long row,col;
+cin >> row >> col;
+long maxx = max(row,col);
+if(maxx % 2){
+if(row >= col){
+cout << (maxx-1)*(maxx-1) + col;
+}
+else{
+cout << (maxx*maxx) - row + 1;
+}
+
+}
+else{
+if(row < col){
+cout << (maxx-1)*(maxx-1) + row;
+}
+else{
+cout << (maxx*maxx) - col + 1;
+}
+
+
+}
+
+cout << "\n";
+
+
+
+
+}
+
+return 0;
+}

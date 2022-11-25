@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+// int t; 
+// cin >> t;
+// for(int w = 0; w < t;w++){
+string s;
+cin >> s;
+long a = s.length();
+long ans = 1;
+long calc = 1;
+for(long b = 1; b < a;b++){
+if(b == a-1){if(s[b] == s[b-1]){calc++;};
+ans = max(ans,calc);
+}
+else if(s[b] == s[b-1]){calc++;}
+else{ans = max(ans,calc);calc = 1;}
+}
+cout << ans;
+
+
+//}
+
+
+
+
+
+return 0;
+}

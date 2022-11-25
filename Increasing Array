@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+// int t; 
+// cin >> t;
+// for(int w = 0; w < t;w++){
+long n;
+cin >> n;
+long arr[n];
+for(long y =0 ; y < n;y++){
+cin >> arr[y];
+}
+long long tot = 0;
+for(long y =0 ; y < n;y++){
+if(y == 0){continue;}
+else{
+if(arr[y] < arr[y-1]){tot += arr[y-1] - arr[y];arr[y] += arr[y-1]-arr[y];}
+
+}
+}
+cout << tot;
+
+
+
+
+
+
+//}
+
+return 0;
+}
